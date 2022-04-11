@@ -14,6 +14,7 @@ secret = sys.argv[4]
 version_file = "C:\\Users\\Jenkins\\AppData\\Local\\Jenkins\\.jenkins\\versions\\{}_current_version.txt".format(project)
 f_version = open(version_file, "r")
 project_version = "V{}".format(f_version.read())
+f_version.close()
 
 headers = {
     "Notion-Version": "2022-02-22",
@@ -86,6 +87,7 @@ for x in f:
 
     time.sleep(1)
 
+f.close()
 
 def buildChangeList(title, list, appender):
     if len(list) == 0: return

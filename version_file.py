@@ -29,3 +29,4 @@ try:
 except IOError:
     f = open(file, 'x')
     f.write("0.0.0")
+    f.close()
